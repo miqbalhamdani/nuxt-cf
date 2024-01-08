@@ -1,0 +1,22 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxi build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxi preview",
+    "postinstall": "nuxt prepare",
+    "pages:dev": "wrangler pages dev --compatibility-date=2023-12-18 --proxy 3000 -- npm run dev",
+    "pages:deploy": "npm run build && wrangler pages deploy ./dist"
+  },
+  "devDependencies": {
+    "layer-flight": "^0.1.3",
+    "layer-train": "^0.1.1",
+    "nuxt": "^3.9.0",
+    "vue": "^3.4.5",
+    "vue-router": "^4.2.5",
+    "wrangler": "^3.22.3"
+  }
+}
